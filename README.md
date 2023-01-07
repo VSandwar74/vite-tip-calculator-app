@@ -28,21 +28,22 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Screenshot%202023-01-06%20at%206.19.27%20PM.png)
+![](./images/Screenshot%202023-01-07%20at%206.38.15%20PM.png)
+![](./images/Screenshot%202023-01-07%20at%206.38.37%20PM.png)
 
 ### Links
 
 - Solution URL: [My GitHub](https://github.com/VSandwar74/product-preview-card-component-main)
-- Live Site URL: [My Live Site!](https://luxury-bavarois-8e4c78.netlify.app/)
+- Live Site URL: [My Live Site!](https://stellular-fox-3c8349.netlify.app/)
 
 ## My process
 
 ### Built with
 
+- Vite
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - JS
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
@@ -53,8 +54,36 @@ Use this section to recap over some of your major learnings while working throug
 
 To see how you can add code snippets, see below:
 
+This was my first deep dive into JS and JavaScript integration with events and event handlers, etc.
+
+```js
+"change click".split(" ").forEach(function(e){
+  keys.addEventListener(e, e => {
+    let id = e.target.id
+    if (id === "custom") {
+      tip = Number(e.target.value)/100
+    } else {
+      tip = Number(id)
+    }
+    console.log(tip)
+    output()
+  })
+});
+```
 ```css
-body {margin: 0; height: 100%; overflow: hidden}
+  .field input {
+    all: unset;
+    display: block;
+    text-align: right;
+
+    color: #00464A;
+    background-color: #F3F8FB;
+    font-size: 24px;
+    outline: none;
+    border: none;
+    padding-right: 20px;
+    width: 200px;
+  }
 ```
 
 ### Continued development
@@ -65,7 +94,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Shapes in HTML](https://www.w3schools.com/howto/howto_css_circles.asp) - Didn't use this in my final product, but neat resource on learning how to make shapes with span.
+- [Mozilla Event Handlers](https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers) - Mozilla was really helpful in understanding events and event handlers.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
