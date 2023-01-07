@@ -9,37 +9,81 @@
 
     <title>Frontend Mentor | Tip calculator app</title>
 
+    <link rel="stylesheet" href="style.css" />
+
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
     </style>
   </head>
   <body>
-
-    <div id="app"></div>
-    Bill
-
-    Select Tip %
-    5%
-    10%
-    15%
-    25%
-    50%
-    Custom
-
-    Number of People
-
-    Tip Amount
-    / person
-
-    Total
-    / person
-
-    Reset
+    <div class="logo">
+      <h3 id="logotop">S P L I<br>T T E R</h3>
+    </div>
+    <div class="container">
+      <div class="input">
+        <div class="bill">
+          <h4>Bill</h4>
+          <div class="field">
+            <img src="./images/icon-dollar.svg" />
+            <input type="number" data-type="currency" placeholder="0" id="price">
+          </div>
+        </div>
+        <div class="percent">
+          <h4>Select Tip %</h4>
+          <div class="tips">
+            <button class="tip" data-action="5%" id="0.05">
+              <h2>5%</h2>
+            </button>
+            <button class="tip" data-action="10%" id="0.1">
+              <h2>10%</h2>
+            </button>
+            <button class="tip" data-action="15%" id="0.15">
+              <h2>15%</h2>
+            </button>
+            <button class="tip" data-action="25%" id="0.25">
+              <h2>25%</h2>
+            </button>
+            <button class="tip" data-action="50%" id="0.5">
+              <h2>50%</h2>
+            </button>
+            <input class="tip" id="custom" type="percent" placeholder="Custom"/>
+          </div>
+        </div>
+        <div class="people">
+          <div class="ppltitle">
+            <h4>Number of People</h4>
+            <h4 id="error">Can't be zero</h4>
+          </div>
+          <div class="field" id="pplfield">
+            <img src="./images/icon-person.svg" />
+            <input type="tel" placeholder="0" data-type="integer" id="ppl"/>
+          </div>
+        </div>
+      </div>
+      <div class="output">
+        <div class="tipamount">
+          <div class="label">
+            <h4>Tip Amount</h4>
+            <p>/ person</p>
+          </div>
+          <h1 id="tipamount">$0.00</h1>
+        </div>
+        <div class="total">
+          <div class="label">
+            <h4>Total</h4>
+            <p>/ person</p>
+          </div>
+          <h1 id="total">$0.00</h1>
+        </div>
+        <button class="reset" id="resetButton">
+          <!-- <div class="overlay"></div> -->
+          <h3>RESET</h3>
+        </button>
+      </div>
+    </div>
     <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/VSandwar74">Vishakh Sandwar</a>.
     </div>
     <script type="module" src="/main.js"></script>
   </body>
